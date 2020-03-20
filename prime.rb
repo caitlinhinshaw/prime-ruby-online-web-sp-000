@@ -1,3 +1,5 @@
-def prime?(int)
-  factors = (2..(Math.sqrt(int).to_int)).to_a
+def prime?(number)
+  (2..Integer.sqrt(number)).none? do |factor|
+    number % factor == 0
+  end
 end
